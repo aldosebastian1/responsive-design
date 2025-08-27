@@ -109,7 +109,7 @@ section > p {
   margin-bottom: 30px;
 }
 
-/* Mobile-first approach - single column grid */
+/* Mobile-first: single column grid with 10px gap */
 .movies {
   display: grid;
   grid-template-columns: 1fr;
@@ -203,6 +203,14 @@ section > p {
   border-left-color: #27ae60;
 }
 
+.reason:nth-child(4) {
+  border-left-color: #9b59b6;
+}
+
+.reason:nth-child(5) {
+  border-left-color: #e74c3c;
+}
+
 .reason h4 {
   color: #2c3e50;
   margin-bottom: 10px;
@@ -221,35 +229,35 @@ footer {
   margin-top: 40px;
 }
 
-/* Tablet view - triggered at 772px */
+/* Tablet view - min-width: 772px */
 @media (min-width: 772px) {
   .movies {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .movie-card img {
     border-radius: 50%;
   }
-  
+
   .movie-card:last-child {
     grid-column: 1 / -1;
   }
 }
 
-/* Large screen view - triggered at 992px */
+/* Large screen view - min-width: 992px */
 @media (min-width: 992px) {
   .movies {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  
+
   .movie-card img {
     border-radius: 8px;
   }
-  
+
   .movie-card:nth-child(3n) {
     grid-column: span 2;
   }
-  
+
   .movie-card:last-child {
     grid-column: auto;
   }
@@ -262,7 +270,7 @@ footer {
   .movie-card {
     transition: none;
   }
-  
+
   html {
     scroll-behavior: auto;
   }
